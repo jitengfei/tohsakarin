@@ -10,6 +10,7 @@ public class ServiceApplication {
 
     public static void main(String[] args) {
         SpringApplication.run(ServiceApplication.class,args);
+        logger.info("Service 启动完成");
     }
 
 }
