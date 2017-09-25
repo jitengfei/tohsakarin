@@ -14,6 +14,7 @@
         <module>tohsakarin_pojo</module>
         <module>tohsakarin_service</module>
         <module>tohsakarin_api</module>
+        <module>tohsakarin_interface</module>
     </modules>
 
     <!-- 集中定义依赖版本号 -->
@@ -24,8 +25,11 @@
         <mybatis.spring.version>1.2.2</mybatis.spring.version>
         <mybatis.paginator.version>1.2.15</mybatis.paginator.version>
         <mysql.version>5.1.32</mysql.version>
-        <slf4j.version>1.6.4</slf4j.version>
-        <jackson.version>2.4.2</jackson.version>
+        <!--<slf4j-log4j12.version>1.7.21</slf4j-log4j12.version>
+        <log4j.version>1.2.17</log4j.version>
+        <slf4j-api.version>1.7.21</slf4j-api.version>-->
+        <spring-boot-starter-log4j.version>1.3.8.RELEASE</spring-boot-starter-log4j.version>
+        <jackson.version>2.8.5</jackson.version>
         <druid.version>1.0.9</druid.version>
         <httpclient.version>4.3.5</httpclient.version>
         <jstl.version>1.2</jstl.version>
@@ -103,10 +107,26 @@
             </dependency>
             <!-- 日志处理 -->
             <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-log4j</artifactId>
+                <version>${spring-boot-starter-log4j.version}</version>
+            </dependency>
+            <!--<dependency>
                 <groupId>org.slf4j</groupId>
                 <artifactId>slf4j-log4j12</artifactId>
-                <version>${slf4j.version}</version>
+                <version>${slf4j-log4j12.version}</version>
+            </dependency>-->
+            <!--<dependency>
+                <groupId>log4j</groupId>
+                <artifactId>log4j</artifactId>
+                <version>${log4j.version}</version>
             </dependency>
+            <dependency>
+                <groupId>org.slf4j</groupId>
+                <artifactId>slf4j-api</artifactId>
+                <version>${slf4j-api.version}</version>
+            </dependency>-->
+
             <!-- Mybatis -->
             <dependency>
                 <groupId>org.mybatis</groupId>
@@ -146,7 +166,7 @@
                 <version>${druid.version}</version>
             </dependency>
             <!-- Spring -->
-            <dependency>
+            <!--<dependency>
                 <groupId>org.springframework</groupId>
                 <artifactId>spring-context</artifactId>
                 <version>${spring.version}</version>
@@ -180,7 +200,7 @@
                 <groupId>org.springframework</groupId>
                 <artifactId>spring-context-support</artifactId>
                 <version>${spring.version}</version>
-            </dependency>
+            </dependency>-->
 
             <!-- spring boot -->
             <dependency>
@@ -215,9 +235,15 @@
                 <artifactId>mybatis-spring-boot-starter</artifactId>
                 <version>${mybatis-spring-boot-starter.version}</version>
             </dependency>
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-tomcat</artifactId>
+                <!--<scope>provided</scope>-->
+                <version>${spring-boot.version}</version>
+            </dependency>
 
             <!-- JSP相关 -->
-            <dependency>
+            <!--<dependency>
                 <groupId>jstl</groupId>
                 <artifactId>jstl</artifactId>
                 <version>${jstl.version}</version>
@@ -233,7 +259,7 @@
                 <artifactId>jsp-api</artifactId>
                 <version>${jsp-api.version}</version>
                 <scope>provided</scope>
-            </dependency>
+            </dependency>-->
             <!-- 文件上传组件 -->
             <dependency>
                 <groupId>commons-fileupload</groupId>

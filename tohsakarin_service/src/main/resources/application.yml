@@ -1,0 +1,39 @@
+# 主配置文件，配置了这个会优先读取里面的属性覆盖主配置文件的属性
+spring:
+    profiles:
+        active: dev
+    # FreeMarker数字格式
+    freemarker:
+      settings:
+        number_format: 0.##
+      template-loader-path: classpath:/templates
+      cache: false
+      charset: utf-8
+      check-template-location: true
+      content-type: text/html
+      expose-request-attributes: true
+      expose-session-attributes: true
+      request-context-attribute: request
+#      suffix: ftl  不用加，加了报错，不加会自动去templates里面找ftl结尾的freemarker文件
+
+    http:
+      encoding:
+        charset: UTF-8
+        enabled: true
+        force: true
+
+    messages:
+      encoding: UTF-8
+
+banner:
+  charset: UTF-8
+
+server:
+  tomcat:
+    uri-encoding: UTF-8
+# 应用自定义配置
+#logging:
+#  config:
+#    classpath: application-dev.yml
+#    file: ./application-dev.yml
+#    application-dev.yml

@@ -1,0 +1,94 @@
+# 端口配置
+server:
+  port: 8989
+debug: true
+
+# Mysql数据库连接配置
+spring:
+  datasource:
+#    type: com.alibaba.druid.pool.DruidDataSource
+    url: jdbc:mysql://localhost:3380/usermanage?useUnicode=true&characterEncoding=utf8&autoReconnect=true&allowMultiQueries=true
+    username: root
+    password: 123456
+    driver-class-name: com.mysql.jdbc.Driver
+
+   # 前后缀
+#  mvc:
+#    view:
+#      prefix: /WEB-INF/views/
+#      suffix: .html
+
+# Mybatis
+#mybatis:
+#  type-aliases-package: com.sora.pojo
+#  config-location: classpath:mybatis/mybatis-config.xml
+#  mapper-locations: classpath:mybatis/mapper/*.xml
+#  configuration:  会和上面的config-location冲突，所以还是选择传统配置，pagehelper也需要在mybatis核心文件中配置
+#    map-underscore-to-camel-case: true
+#    interceptors: com.github.pagehelper.PageHelper
+
+
+
+
+
+
+
+#  thymeleaf:
+#    enabled: true
+#    encoding: UTF-8
+
+#  redis:
+#    ## Redis数据库索引（默认为0）
+#    database: 0
+#    ## Redis服务器地址
+#    host: localhost
+#    ## Redis服务器连接端口
+#    port: 6379
+#    ## Redis服务器连接密码（默认为空）
+#    password:
+#    pool:
+#      ## 连接池最大连接数（使用负值表示没有限制）
+#      max-active: 8
+#      ## 连接池中的最大空闲连接
+#      max-idle: 8
+#      ## 连接池最大阻塞等待时间（使用负值表示没有限制）
+#      max-wait: -1
+#      ## 连接池中的最小空闲连接
+#      min-idle: 0
+#    ## 连接超时时间（毫秒）
+#    timeout: 0
+
+# ElasticSearch
+#  data:
+#    elasticsearch:
+#      repositories:
+#        enabled: true
+#      cluster-nodes: 127.0.0.1:9300
+
+
+
+#    excluded-view-names:
+
+
+
+
+
+# FreeMarker
+
+#        jpa:
+#        properties:
+#        hibernate:
+#        hbm2ddl:
+#        auto: update
+#
+#        rabbitmq:
+#        host: 115.29.105.167
+#        port: 5672
+#        username: guest
+#        password: 123456
+#        redis:
+#        host: 115.29.105.167
+#        port: 36379
+#        password: Hjb[rd]PassIn.167
+#        timeout: 3600
+#
