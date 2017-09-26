@@ -78,11 +78,11 @@
         </dependency>
 
         <!-- 单元测试 -->
-        <dependency>
+        <!--<dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
             <scope>test</scope>
-        </dependency>
+        </dependency>-->
 
         <!--<dependency>
             <groupId>org.slf4j</groupId>
