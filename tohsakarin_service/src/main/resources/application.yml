@@ -37,9 +37,9 @@ mybatis:
     # 配置类型别名
     typeAliasesPackage: com.c4.entity
     # 配置mapper的扫描，找到所有的mapper.xml映射文件
-    mapperLocations: classpath:com.c4.mybatis/mapper/*.xml
+    mapperLocations: classpath*:com/c4/mybatis/mapper/*.xml
     # 加载全局的配置文件
-    configLocation: classpath:com.c4.mybatis/mybatis-config.xml
+    configLocation: classpath:mybatis/mybatis-config.xml
     #configuration:  会和上面的config-location冲突，所以还是选择传统配置，pagehelper也需要在mybatis核心文件中配置
     #    map-underscore-to-camel-case: true
     #    interceptors: com.github.pagehelper.PageHelper

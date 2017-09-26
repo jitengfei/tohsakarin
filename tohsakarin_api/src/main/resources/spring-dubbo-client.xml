@@ -20,7 +20,7 @@
     <mvc:resources location="/static/css/" mapping="/css/**"/>
     <mvc:resources location="/static/js/" mapping="/js/**"/>-->
     <!-- 引用dubbo服务 -->
-    <dubbo:application name="spring-boot--web-consumer"/>
+    <dubbo:application name="spring-boot-web-consumer"/>
     <dubbo:registry protocol="zookeeper" address="192.168.25.160:2181"/>
     <!--<dubbo:reference interface="cn.e3mall.service.ItemService" id="itemService" />-->
 </beans>
