@@ -15,10 +15,10 @@
     <!-- 使用dubbo发布服务 -->
     <!-- 提供方应用信息，用于计算依赖关系 -->
     <dubbo:application name="dubbo-manage-server" />
-    <dubbo:registry protocol="zookeeper" address="192.168.25.160:2181" />
+    <dubbo:registry protocol="zookeeper" address="106.14.157.165:2181" />
     <!-- 用dubbo协议在20880端口暴露服务 -->
     <dubbo:protocol name="dubbo" port="20880" />
     <!-- 声明需要暴露的服务接口 -->
-    <!--<bean id="batchRechargeService" class="com.wuxian99.ics.datacenter.service.batch.BatchRechargeServiceImpl" />-->
-    <!--<dubbo:service interface="cn.e3mall.service.ItemService" ref="itemServiceImpl"/>-->
+    <!--<dubbo:service interface="com.alibaba.dubbo.demo.DemoService" ref="demoServiceLocal" />
+    <dubbo:reference id="demoServiceRemote" interface="com.alibaba.dubbo.demo.DemoService" />-->
 </beans>
