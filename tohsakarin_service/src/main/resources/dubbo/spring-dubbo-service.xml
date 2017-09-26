@@ -10,7 +10,7 @@
 
 
     <!-- 配置包扫描器 -->
-    <!--<context:component-scan base-package="com.c4.tohsakarin.service"/>-->
+    <!--<context:component-scan serviceImpl-package="com.c4.tohsakarin.service"/>-->
 
     <!-- 使用dubbo发布服务 -->
     <!-- 提供方应用信息，用于计算依赖关系 -->
