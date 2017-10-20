@@ -1,3 +1,6 @@
+<#-- 可复用模块 -->
+
+<#-- 菜单 -->
 <#macro menus menuList>
 <div id="sidebar-nav" class="sidebar">
     <div class="sidebar-scroll">
@@ -28,10 +31,12 @@
 </div>
 </#macro>
 
+<#-- 头 -->
 <#macro header>
 
 </#macro>
 
+<#-- 尾 -->
 <#macro fotter>
 
 </#macro>
