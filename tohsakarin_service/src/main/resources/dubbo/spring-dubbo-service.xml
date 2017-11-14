@@ -7,17 +7,14 @@
         http://code.alibabatech.com/schema/dubbo
         http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
 
-
-    <!-- 配置包扫描器 -->
-    <!--<context:component-scan serviceImpl-package="com.c4.tohsakarin.service"/>-->
-
     <!-- 使用dubbo发布服务 -->
     <!-- 提供方应用信息，用于计算依赖关系 -->
-    <dubbo:application name="dubbo-manage-server" />
-    <dubbo:registry protocol="zookeeper" address="106.14.157.165:2181" />
+    <dubbo:application name="${dubbo.application.name}" />
+    <dubbo:registry protocol="${dubbo.registry.protocol}" address="${dubbo.registry.address}" />
     <!-- 用dubbo协议在20880端口暴露服务 -->
-    <dubbo:protocol name="dubbo" port="20880" />
+    <dubbo:protocol name="${dubbo.protocol.name}" port="${dubbo.protocol.port}" />
     <!-- 声明需要暴露的服务接口 -->
-    <!--<dubbo:service interface="com.alibaba.dubbo.demo.DemoService" ref="demoServiceLocal" />
-    <dubbo:reference id="demoServiceRemote" interface="com.alibaba.dubbo.demo.DemoService" />-->
+    <bean id="userService" class="com.c4.serviceImpl.UserServiceImpl" />
+    <dubbo:service interface="com.c4.service.UserService" ref="userService" />
+
 </beans>

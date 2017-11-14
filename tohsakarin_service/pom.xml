@@ -166,6 +166,11 @@
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-api</artifactId>
         </dependency>-->
+
+        <dependency>
+            <groupId>com.github.sgroschupf</groupId>
+            <artifactId>zkclient</artifactId>
+        </dependency>
     </dependencies>
     <build>
         <finalName>tohsakarin_service</finalName>
