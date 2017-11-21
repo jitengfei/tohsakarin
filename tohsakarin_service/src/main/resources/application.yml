@@ -24,6 +24,9 @@ spring:
 
     messages:
       encoding: UTF-8
+    devtools:
+      livereload:
+        port: 8083
 
 banner:
   charset: UTF-8

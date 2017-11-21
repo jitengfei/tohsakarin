@@ -8,8 +8,11 @@
         http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
 
     <!-- 引用dubbo服务 -->
-    <dubbo:application name="spring-boot-web-consumer"/>
-    <dubbo:registry protocol="zookeeper" address="192.168.25.160:2181"/>
+    <dubbo:application name="${dubbo.application.name}"/>
+    <dubbo:registry protocol="${dubbo.registry.protocol}" address="${dubbo.registry.address}"/>
+    <dubbo:consumer check="false"  timeout="${dubbo.consumer.timeout}" />
+
+    <dubbo:annotation package="com.c4" />
 
     <!-- 从注册中心中查找服务 -->
     <!--<dubbo:reference id="itemCatService" interface="cn.itcast.service.ItemCatService"/>
