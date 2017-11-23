@@ -19,7 +19,7 @@ public class TestController {
     @RequestMapping("/user/{id}")
     public String test(@PathVariable Long id){
         User user = userService.findUserByUserId(id);
-        return user.getEmail();
+        return user.getId().toString();
     }
 
 }

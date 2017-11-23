@@ -13,8 +13,9 @@
     <dubbo:registry protocol="${dubbo.registry.protocol}" address="${dubbo.registry.address}" />
     <!-- 用dubbo协议在20880端口暴露服务 -->
     <dubbo:protocol name="${dubbo.protocol.name}" port="${dubbo.protocol.port}" />
+    <dubbo:annotation package="com.c4.serviceImpl" />
     <!-- 声明需要暴露的服务接口 -->
-    <bean id="userService" class="com.c4.serviceImpl.UserServiceImpl" />
-    <dubbo:service interface="com.c4.service.UserService" ref="userService" />
+    <!--<bean id="userService" class="com.c4.serviceImpl.UserServiceImpl" />
+    <dubbo:service interface="com.c4.service.UserService" ref="userService" />-->
 
 </beans>
